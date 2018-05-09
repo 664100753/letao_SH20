@@ -5,3 +5,9 @@ body {
 .mt-top {
   margin-top: 150px;
 }
+
+.panel-title {
+  line-height: 40px;
+  font-size: 18px;
+  
+}
