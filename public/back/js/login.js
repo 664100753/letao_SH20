@@ -87,12 +87,12 @@ $(function(){
         
         
         if(info.error === 1000){
-          alert('用户不存在');
+          // alert('用户不存在');
           $('#form').data('bootstrapValidator').updateStatus('username','INVALID','callback')
         }
         
         if(info.error === 1001){
-          alert('密码错误');
+          // alert('密码错误');
           $('#form').data('bootstrapValidator').updateStatus('password','INVALID','callback')
         }
       }
