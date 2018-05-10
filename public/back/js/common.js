@@ -36,15 +36,15 @@ $(function(){
 //禁用进度环
 NProgress.configure({ showSpinner: false });
 
-$(function(){
+
   $(document).ajaxStart(function(){
     NProgress.start();//开启进度条
   });
   
   $(document).ajaxStop(function(){
     NProgress.done();//关闭进度条
-  })
-});
+  });
+
 
 //分类管理二级菜单栏
 $(function(){
