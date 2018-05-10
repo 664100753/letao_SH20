@@ -1,6 +1,36 @@
 /**
  * Created by 张帅 on 2018/5/9.
  */
+// 5. 登录拦截分析, 现在注意: 我们是前后端分离的, 前端并不知道当前用户有没有登录
+//    不知道, 问呗, 需要一进入页面, 就调用接口, 来判断当前用户有没有登录
+//    (1) 如果没有登陆, 不需要下面的操作了, 直接拦截到登录页面即可
+//    (2) 如果当前用户登录, 啥都不用干, 让用户继续访问即可
+//    (3) 我们需要将不需要用户登录的页面 (登录页, 进行排除)
+$(function(){
+  if(location.href.indexOf('login.html') === -1){
+  
+    // 如果当前地址栏中没有 login.html, 需要判断当前用户状态
+    $.ajax({
+      type:'get',
+      url:'/employee/checkRootLogin',
+      dataType:'json',
+      success:function(info){
+        // console.log(info);
+        if(info.error === 400){
+          location.href = 'login.html';
+        }
+      }
+    })
+  }
+});
+
+
+
+
+
+
+
+
 //进度条功能的实现
 
 //禁用进度环
@@ -17,8 +47,10 @@ $(function(){
 });
 
 //分类管理二级菜单栏
-$('.category').on('click',function(){
-  $('.lt_aside .child').stop().slideToggle()
+$(function(){
+  $('.category').on('click',function(){
+    $('.lt_aside .child').stop().slideToggle()
+  });
 });
 
 
