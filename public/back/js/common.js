@@ -16,12 +16,20 @@ $(function(){
   })
 });
 
+//分类管理二级菜单栏
+$('.category').on('click',function(){
+  $('.lt_aside .child').stop().slideToggle()
+});
+
+
+
+
 //侧边栏动画效果
 $(function(){
   $('.lt_topbar .icon_menu').click(function(){
-    $('.lt_aside').addClass('hidemenu');
-    $('.lt_main').addClass('hidemenu');
-    $('.lt_main .lt_topbar').addClass('hidemenu');
+    $('.lt_aside').toggleClass('hidemenu');
+    $('.lt_main').toggleClass('hidemenu');
+    $('.lt_main .lt_topbar').toggleClass('hidemenu');
   })
 });
 
@@ -34,3 +42,17 @@ $(function(){
 });
 
 //点击模态框退出按钮,退出当前页面
+$('#logoutBtn').on('click',function(){
+  $.ajax({
+    type:'get',
+    url:'/employee/employeeLogout',
+    dataType:'json',
+    success:function(info){
+     //判断当前是否成功
+      if(info.success){
+        //跳转到登录页面
+        location.href = 'login.html';
+      }
+    }
+  })
+});
