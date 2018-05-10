@@ -47,6 +47,40 @@
     </ul>
   </div>
 </div>
+<!--主题模块-->
+<div class="lt_main">
+  <div class="lt_topbar">
+    <a href="javascript:;" class="pull-left icon_menu"><i class="glyphicon glyphicon-align-justify"></i></a>
+    <a href="javascript:;" class="pull-right icon_logout"><i class="glyphicon glyphicon-log-out"></i></a>
+  </div>
+  <!--导航条-->
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      <li><a href="index.html">管理系统</a></li>
+      <li class="active">商品管理</li>
+    </ol>
+  </div>
+</div>
+
+<!--模态框-->
+<!-- Small modal -->
+<div class="modal fade in" id="logoutModal" style="display: none;">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <p class="red"><i class="glyphicon glyphicon-info-sign"></i> 您确定要退出后台管理系统吗？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
