@@ -139,6 +139,15 @@ ul {
   font-size: 20px;
 }
 
+.lt_content .btn {
+  margin-bottom: 20px;
+}
+
+/*.lt_main .lt_content {*/
+  /*padding-right: 15px;*/
+  /*padding-left: 15px;*/
+/*}*/
+
 /*路径导航*/
 
 .breadcrumb {
