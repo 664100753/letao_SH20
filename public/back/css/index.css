@@ -139,9 +139,11 @@ ul {
   font-size: 20px;
 }
 
-.lt_content .btn {
+.lt_content .btn-primary {
   margin-bottom: 20px;
 }
+
+
 
 /*.lt_main .lt_content {*/
   /*padding-right: 15px;*/
