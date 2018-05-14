@@ -105,3 +105,54 @@ img {
 .lt_footer li a.current p {
   color: orange;
 }
+
+
+/* 公共的 lt_search 搜索框 */
+.lt_search {
+  padding: 10px;
+  position: relative;
+}
+.lt_search input {
+  height: 34px;
+  border-radius: 5px;
+  border: 1px solid #007AFF;
+  margin: 0;
+  font-size: 12px;
+}
+.lt_search button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+
+/* 公共的 lt_product */
+.lt_product {
+  padding: 10px;
+}
+.lt_product_item {
+  width: 48%;
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.lt_product_item:nth-child(2n+1) {
+  margin-right: 4%;
+}
+
+.lt_product_item a {
+  display: block;
+  padding: 10px;
+}
+.lt_product_item a .oldPrice {
+  text-decoration: line-through;
+}
+.lt_product_item a .price {
+  color: #FF4141;
+}
+.lt_product_item .mui-ellipsis-2 {
+  height: 40px;
+}

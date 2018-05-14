@@ -1,0 +1,54 @@
+.lt_main .lt_search {
+  padding: 10px;
+  position: relative;
+}
+
+.lt_main .lt_search input {
+  height: 34px;
+  font-size: 12px;
+  /*border: none;*/
+  border: 1px solid #007AFF;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.lt_main .lt_search button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+.lt_main .lt_history {
+  padding: 10px;
+}
+
+.lt_history .title {
+  font-size: 12px;
+  color: #666;
+}
+
+.lt_history .title i {
+  padding-right: 3px;
+}
+
+.lt_history .content ul {
+  border: 1px dashed red;
+}
+
+.lt_history .content ul li {
+  border-bottom: 1px dashed red;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.lt_history .content ul li:last-child {
+  border-bottom: none;
+}
+
+.lt_history .content i {
+  line-height: 30px;
+}
+

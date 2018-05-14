@@ -9,7 +9,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
 
@@ -18,35 +18,32 @@
 <div class="lt_container">
   <!-- 头部 -->
   <div class="lt_header">
-    <a href="index.html" class="icon_left">
-      <i class="fa fa-home"></i>
+    <!-- 回到上一页 history.go(-1)  history.back() -->
+    <a href="javascript:history.go(-1);" class="icon_left">
+      <i class="mui-icon mui-icon-back"></i>
     </a>
-    <h3>乐淘云购</h3>
-    <a href="search.html" class="icon_right">
-      <i class="fa fa-search"></i>
-    </a>
+    <h3>搜索中心</h3>
   </div>
 
 
   <!-- 主体部分 -->
   <div class="lt_main">
-    <!-- 需要有两个区域滚动 -->
-    <div class="lt_category_left">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <ul>
-            <!-- 挖了个坑 -->
-          </ul>
+    <div class="mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <!--这里放置真实显示的DOM内容-->
+
+        <!-- 乐淘搜索框 -->
+        <div class="lt_search">
+          <input type="text" placeholder="请输入搜索关键字">
+          <button class="mui-btn mui-btn-primary">搜索</button>
         </div>
-      </div>
-    </div>
-    <div class="lt_category_right">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <ul class="mui-clearfix">
-            <!-- 挖个坑 -->
-          </ul>
+
+        <!-- 乐淘历史记录 -->
+        <div class="lt_history">
+          <!-- 挖个大坑 -->
         </div>
+
+
       </div>
     </div>
   </div>
@@ -62,7 +59,7 @@
         </a>
       </li>
       <li>
-        <a href="category.html" class="current">
+        <a href="category.html">
           <i class="fa fa-bars"></i>
           <p>分类页</p>
         </a>
@@ -83,25 +80,25 @@
   </div>
 </div>
 
-<script type="text/html" id="leftTpl">
-  {{ each rows v i }}
-    <li><a href="#" data-id="{{ v.id }}" class="{{ i === 0 ? 'current' : '' }}">{{ v.categoryName }}</a></li>
-  {{ /each }}
-</script>
-
-<script type="text/html" id="rightTpl">
-  {{ if rows.length === 0 }}
-    <p class="tips">没有更多分类信息了</p>
+<script type="text/html" id="historyTpl">
+  {{ if arr.length > 0 }}
+    <div class="title mui-clearfix">
+      <span class="mui-pull-left">搜索历史</span>
+      <span class="btn_empty mui-pull-right"><i class="fa fa-trash"></i> 清空记录</span>
+    </div>
+    <div class="content">
+      <ul>
+        {{ each arr v i }}
+        <li>
+          <a href="searchList.html?key={{ v }}" class="mui-pull-left">{{ v }}</a>
+          <i data-index="{{ i }}" class="btn_delete mui-pull-right mui-icon mui-icon-closeempty"></i>
+        </li>
+        {{ /each }}
+      </ul>
+    </div>
+  {{ else }}
+    <p>没有更多历史记录了</p>
   {{ /if }}
-
-  {{ each rows v i }}
-    <li>
-      <a href="#">
-        <img src="{{ v.brandLogo }}" alt="">
-        <p>{{ v.brandName }}</p>
-      </a>
-    </li>
-  {{ /each }}
 </script>
 
 
@@ -110,7 +107,7 @@
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
-<script src="js/category.js"></script>
+<script src="js/search.js"></script>
 
 
 </body>
