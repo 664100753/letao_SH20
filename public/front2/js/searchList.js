@@ -4,7 +4,6 @@
 
 $(function() {
 
-
   // 功能1 一进入页面, 解析地址栏参数, 将搜索关键字赋值到 搜索框中
   var key = getSearch("key");
   $('.lt_search input').val( key );
@@ -13,7 +12,6 @@ $(function() {
   function render() {
     // 在每次需要更新新数据时, 先将 lt_product 置成 loading 状态
     $('.lt_product').html('<div class="loading"></div>');
-
 
     var params = {};
     // 搜索关键字从搜索框中进行读取, 是最合适的
@@ -110,4 +108,4 @@ $(function() {
     render();
   })
 
-});
+})

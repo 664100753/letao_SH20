@@ -122,11 +122,9 @@ $(function() {
 
     // 需求1: 如果有重复的项, 删除
     var index = arr.indexOf(key);
-    console.log("index  "+index);
     if ( index > -1 ) {
       // 说明有重复项, 要删除该项
       arr.splice( index, 1 );
-      console.log(arr);
     }
 
     // 需求2: 如果历史记录长度大于 10, 删掉最后一个, 最老的一个
