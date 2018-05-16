@@ -72,13 +72,16 @@ $(function(){
               location.href = 'cart.html';
             }
             
-            if(info.error === 400){
-              // 说明没有登陆, 跳转到登录页,
-              // 因为是在商品页, 拦截到登录页的, 将来登录完成还要跳回来 (需要地址才能跳回来)
-              // 在进行跳转到 login.html 的同时, 就还需要将当前页面的地址也传递过去
-              location.href = 'login.html?retUrl='+ location.href;
-            }
+            
           })
+        };
+  
+  
+        if(info.error === 400){
+          // 说明没有登陆, 跳转到登录页,
+          // 因为是在商品页, 拦截到登录页的, 将来登录完成还要跳回来 (需要地址才能跳回来)
+          // 在进行跳转到 login.html 的同时, 就还需要将当前页面的地址也传递过去
+          location.href = 'login.html?retUrl='+ location.href;
         }
       }
     })
