@@ -49,7 +49,7 @@ $(function(){
          }
          else{
            //否则不存在,跳转到会员中心
-           location.href = 'member.html';
+           location.href = 'user.html';
          }
          
        }

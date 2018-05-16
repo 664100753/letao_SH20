@@ -1,0 +1,15 @@
+.mui-scroll .btn-wrap {
+  padding: 10px;
+}
+
+
+
+.mui-scroll #btn {
+
+  width: 100%;
+  display: block;
+  padding: 5px 0;
+  font-size: 18px;
+  background-color: #006699;
+  color: #fff;
+}
