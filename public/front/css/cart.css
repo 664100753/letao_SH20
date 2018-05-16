@@ -1,0 +1,96 @@
+.mui-scroll .img_box {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right:8px;
+}
+
+.mui-scroll .img_box img {
+  display: block;
+  width: 100%;
+}
+
+.mui-scroll .info_box {
+  overflow: hidden;
+}
+
+.mui-scroll .info_box p:first-child{
+  color: #000;
+}
+
+.mui-scroll .info_box span:first-child {
+  color: red;
+}
+
+.mui-scroll .info_box span:nth-child(2){
+  text-decoration: line-through;
+}
+
+.mui-scroll .info_box span:last-child {
+float: right;
+}
+
+/*莫泰框的样式*/
+.item_box {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.lt_price .price {
+  color: #FF3737;
+}
+.lt_price .oldPrice {
+  font-size: 12px;
+  color: #666;
+  text-decoration: line-through;
+}
+
+
+
+
+
+.lt_num span {
+  font-size: 12px;
+  color: #666;
+}
+
+
+
+.lt_go_cart {
+  height: 55px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #EFEFF4;
+  border-top: 1px solid red;
+  padding: 10px;
+}
+.lt_go_cart a {
+  padding: 5px;
+}
+
+/*乐淘价格*/
+
+.lt_total {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #EEEEEE;
+  font-size: 12px;
+  color: red;
+  padding-left: 10px;
+}
+.lt_total a {
+  height: 30px;
+  padding: 0 15px;
+  background-color: red;
+  color: #fff;
+}
+
+.lt_container {
+  padding-bottom: 85px;
+}

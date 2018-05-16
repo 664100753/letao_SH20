@@ -176,3 +176,20 @@ img {
   text-decoration: line-through;
 }
 
+/*公共的尺码样式*/
+
+/* 公共的尺码样式 */
+.lt_size span {
+  height: 25px;
+  line-height: 25px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #F5F5F5;
+  font-size: 12px;
+  padding: 0 3px;
+  margin: 3px 0;
+}
+.lt_size span.current {
+  background-color: orange;
+  color: white;
+}
